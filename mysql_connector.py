@@ -2,8 +2,8 @@ import mysql.connector
 
 conn = mysql.connector.connect(
     host = "localhost",
-    user = "rent_user",
-    passwd = "livein_password",
+    user = "user",
+    passwd = "password",
     database = "rent_data"
 )
 sql = conn.cursor()
