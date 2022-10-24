@@ -31,7 +31,7 @@ class Job(models.Model):
     tenure = models.PositiveSmallIntegerField()
     address = models.CharField(max_length=100)
     coordinate = models.CharField(max_length=50)
-    scroe = models.SmallIntegerField()
+    score = models.SmallIntegerField()
     url = models.URLField(max_length=300, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, blank=True)

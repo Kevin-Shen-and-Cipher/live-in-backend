@@ -1,14 +1,13 @@
 from django.http import JsonResponse
-from rest_framework.generics import GenericAPIView
+from rest_framework.views import APIView
 from algorithm.job_weight import JobWeight
 from .models import Job
 
 
-class JobView(GenericAPIView):
+class JobView(APIView):
 
     def get(request):
         jobs = Job.objects.filter().values()
-
         address = request.GET.get("address")
 
         result = []
