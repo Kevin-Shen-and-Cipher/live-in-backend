@@ -1,0 +1,289 @@
+[
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "中山區",
+            "city": 1
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "大安區",
+            "city": 1
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "信義區",
+            "city": 1
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "士林區",
+            "city": 1
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "內湖區",
+            "city": 1
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "中正區",
+            "city": 1
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "萬華區",
+            "city": 1
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "松山區",
+            "city": 1
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "大同區",
+            "city": 1
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "文山區",
+            "city": 1
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "北投區",
+            "city": 1
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "南港區",
+            "city": 1
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "板橋區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "三重區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "淡水區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "中和區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "永和區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "新莊區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "新店區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "汐止區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "林口區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "蘆洲區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "土城區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "三峽區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "泰山區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "鶯歌區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "樹林區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "五股區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "八里區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "深坑區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "三芝區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "瑞芳區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "金山區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "萬里區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "烏來區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "貢寮區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "坪林區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "石碇區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "平溪區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "雙溪區",
+            "city": 2
+        }
+    },
+    {
+        "model": "job.district",
+        "fields": {
+            "name": "石門區",
+            "city": 2
+        }
+    }
+]
