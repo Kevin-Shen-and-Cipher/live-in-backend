@@ -3,20 +3,27 @@ from algorithm.weight import Weight
 
 class ApartmentWeight(Weight):
     MAX_DISTANCE_METER = 50000
+    FACILITY_WEIGTH = {"捷運": 10, "公車": 1, "學校": 5}
+    FACILITY_WEIGTH_PERCEN = 0.3
+    DISTANCE_WEIGTH_PERCEN = 0.7
 
     def get_weight(self, item):
-        result = self.__get_score_weigth(
+        result = self.__get_facility_weigth(
             item) + self.__get_distance_weight(item)
 
         return result
 
-    def __get_score_weigth(self, item):
-        score = item.get("score")
+    def __get_facility_weigth(self, item):
+        facilities = item.get('surroundingfacility_set')
+        weight = 0
 
-        if (score > 100):
-            weight = 30
-        else:
-            weight = score * 0.3
+        for facility in facilities:
+            weight += self.FACILITY_WEIGTH[facility['name']]
+
+        if (weight > 100):
+            weight = 100
+
+        weight = weight * self.FACILITY_WEIGTH_PERCEN
 
         return weight
 
@@ -28,6 +35,7 @@ class ApartmentWeight(Weight):
         if (distance > self.MAX_DISTANCE_METER):
             weight = 0
         else:
-            weight = (1 - distance / self.MAX_DISTANCE_METER) * 70
+            weight = (1 - distance / self.MAX_DISTANCE_METER) * \
+                self.DISTANCE_WEIGTH_PERCEN * 100
 
         return weight

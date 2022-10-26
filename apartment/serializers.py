@@ -1,36 +1,44 @@
-from rest_framework import serializers
 from job.serializers import DistrictSerializer
-from .models import Apartment, Device, RentType, ApartmentType, Restrict, RoomType
+from rest_framework import serializers
+
+from apartment.models import (Apartment, ApartmentType, Device, RentType,
+                              Restrict, RoomType, SurroundingFacility)
 
 
 class RentTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = RentType
-        fields = '__all__'
+        fields = ['name']
 
 
 class ApartmentTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = ApartmentType
-        fields = '__all__'
+        fields = ['name']
 
 
 class RoomTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = RoomType
-        fields = '__all__'
+        fields = ['name']
 
 
 class RestrictSerializer(serializers.ModelSerializer):
     class Meta:
         model = Restrict
-        fields = '__all__'
+        fields = ['name']
 
 
 class DeviceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Device
-        fields = '__all__'
+        fields = ['name']
+
+
+class SurroundingFacilitySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SurroundingFacility
+        fields = ['name']
 
 
 class ApartmentSerializer(serializers.ModelSerializer):
@@ -38,9 +46,12 @@ class ApartmentSerializer(serializers.ModelSerializer):
     rent_type = RentTypeSerializer()
     apartment_type = ApartmentTypeSerializer()
     room_type = RoomTypeSerializer()
-    restrict = RestrictSerializer()
-    device = DeviceSerializer()
+    restrict = RestrictSerializer(many=True, read_only=True)
+    device = DeviceSerializer(many=True, read_only=True)
+    surroundingfacility_set = SurroundingFacilitySerializer(
+        many=True, read_only=True)
 
     class Meta:
         model = Apartment
-        fields = '__all__'
+        exclude = ['id', 'created_at', 'updated_at']
+        depth = 1

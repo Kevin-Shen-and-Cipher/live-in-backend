@@ -1,6 +1,7 @@
 [
     {
         "model": "job.district",
+        "pk": 1,
         "fields": {
             "name": "中山區",
             "city": 1
@@ -8,6 +9,7 @@
     },
     {
         "model": "job.district",
+        "pk": 2,
         "fields": {
             "name": "大安區",
             "city": 1
@@ -15,6 +17,7 @@
     },
     {
         "model": "job.district",
+        "pk": 3,
         "fields": {
             "name": "信義區",
             "city": 1
@@ -22,6 +25,7 @@
     },
     {
         "model": "job.district",
+        "pk": 4,
         "fields": {
             "name": "士林區",
             "city": 1
@@ -29,6 +33,7 @@
     },
     {
         "model": "job.district",
+        "pk": 5,
         "fields": {
             "name": "內湖區",
             "city": 1
@@ -36,6 +41,7 @@
     },
     {
         "model": "job.district",
+        "pk": 6,
         "fields": {
             "name": "中正區",
             "city": 1
@@ -43,6 +49,7 @@
     },
     {
         "model": "job.district",
+        "pk": 7,
         "fields": {
             "name": "萬華區",
             "city": 1
@@ -50,6 +57,7 @@
     },
     {
         "model": "job.district",
+        "pk": 8,
         "fields": {
             "name": "松山區",
             "city": 1
@@ -57,6 +65,7 @@
     },
     {
         "model": "job.district",
+        "pk": 9,
         "fields": {
             "name": "大同區",
             "city": 1
@@ -64,6 +73,7 @@
     },
     {
         "model": "job.district",
+        "pk": 10,
         "fields": {
             "name": "文山區",
             "city": 1
@@ -71,6 +81,7 @@
     },
     {
         "model": "job.district",
+        "pk": 11,
         "fields": {
             "name": "北投區",
             "city": 1
@@ -78,6 +89,7 @@
     },
     {
         "model": "job.district",
+        "pk": 12,
         "fields": {
             "name": "南港區",
             "city": 1
@@ -85,6 +97,7 @@
     },
     {
         "model": "job.district",
+        "pk": 13,
         "fields": {
             "name": "板橋區",
             "city": 2
@@ -92,6 +105,7 @@
     },
     {
         "model": "job.district",
+        "pk": 14,
         "fields": {
             "name": "三重區",
             "city": 2
@@ -99,6 +113,7 @@
     },
     {
         "model": "job.district",
+        "pk": 15,
         "fields": {
             "name": "淡水區",
             "city": 2
@@ -106,6 +121,7 @@
     },
     {
         "model": "job.district",
+        "pk": 16,
         "fields": {
             "name": "中和區",
             "city": 2
@@ -113,6 +129,7 @@
     },
     {
         "model": "job.district",
+        "pk": 17,
         "fields": {
             "name": "永和區",
             "city": 2
@@ -120,6 +137,7 @@
     },
     {
         "model": "job.district",
+        "pk": 18,
         "fields": {
             "name": "新莊區",
             "city": 2
@@ -127,6 +145,7 @@
     },
     {
         "model": "job.district",
+        "pk": 19,
         "fields": {
             "name": "新店區",
             "city": 2
@@ -134,6 +153,7 @@
     },
     {
         "model": "job.district",
+        "pk": 20,
         "fields": {
             "name": "汐止區",
             "city": 2
@@ -141,6 +161,7 @@
     },
     {
         "model": "job.district",
+        "pk": 21,
         "fields": {
             "name": "林口區",
             "city": 2
@@ -148,6 +169,7 @@
     },
     {
         "model": "job.district",
+        "pk": 22,
         "fields": {
             "name": "蘆洲區",
             "city": 2
@@ -155,6 +177,7 @@
     },
     {
         "model": "job.district",
+        "pk": 23,
         "fields": {
             "name": "土城區",
             "city": 2
@@ -162,6 +185,7 @@
     },
     {
         "model": "job.district",
+        "pk": 24,
         "fields": {
             "name": "三峽區",
             "city": 2
@@ -169,6 +193,7 @@
     },
     {
         "model": "job.district",
+        "pk": 25,
         "fields": {
             "name": "泰山區",
             "city": 2
@@ -176,6 +201,7 @@
     },
     {
         "model": "job.district",
+        "pk": 26,
         "fields": {
             "name": "鶯歌區",
             "city": 2
@@ -183,6 +209,7 @@
     },
     {
         "model": "job.district",
+        "pk": 27,
         "fields": {
             "name": "樹林區",
             "city": 2
@@ -190,6 +217,7 @@
     },
     {
         "model": "job.district",
+        "pk": 28,
         "fields": {
             "name": "五股區",
             "city": 2
@@ -197,6 +225,7 @@
     },
     {
         "model": "job.district",
+        "pk": 29,
         "fields": {
             "name": "八里區",
             "city": 2
@@ -204,6 +233,7 @@
     },
     {
         "model": "job.district",
+        "pk": 30,
         "fields": {
             "name": "深坑區",
             "city": 2
@@ -211,6 +241,7 @@
     },
     {
         "model": "job.district",
+        "pk": 31,
         "fields": {
             "name": "三芝區",
             "city": 2
@@ -218,6 +249,7 @@
     },
     {
         "model": "job.district",
+        "pk": 32,
         "fields": {
             "name": "瑞芳區",
             "city": 2
@@ -225,6 +257,7 @@
     },
     {
         "model": "job.district",
+        "pk": 33,
         "fields": {
             "name": "金山區",
             "city": 2
@@ -232,6 +265,7 @@
     },
     {
         "model": "job.district",
+        "pk": 34,
         "fields": {
             "name": "萬里區",
             "city": 2
@@ -239,6 +273,7 @@
     },
     {
         "model": "job.district",
+        "pk": 35,
         "fields": {
             "name": "烏來區",
             "city": 2
@@ -246,6 +281,7 @@
     },
     {
         "model": "job.district",
+        "pk": 36,
         "fields": {
             "name": "貢寮區",
             "city": 2
@@ -253,6 +289,7 @@
     },
     {
         "model": "job.district",
+        "pk": 37,
         "fields": {
             "name": "坪林區",
             "city": 2
@@ -260,6 +297,7 @@
     },
     {
         "model": "job.district",
+        "pk": 38,
         "fields": {
             "name": "石碇區",
             "city": 2
@@ -267,6 +305,7 @@
     },
     {
         "model": "job.district",
+        "pk": 39,
         "fields": {
             "name": "平溪區",
             "city": 2
@@ -274,6 +313,7 @@
     },
     {
         "model": "job.district",
+        "pk": 40,
         "fields": {
             "name": "雙溪區",
             "city": 2
@@ -281,6 +321,7 @@
     },
     {
         "model": "job.district",
+        "pk": 41,
         "fields": {
             "name": "石門區",
             "city": 2

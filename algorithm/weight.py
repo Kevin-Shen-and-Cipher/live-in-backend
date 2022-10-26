@@ -1,6 +1,7 @@
-from abc import ABC, abstractmethod
-from google_api.google_api import GoogleAPI
 import string
+from abc import ABC, abstractmethod
+
+from google_api.google_api import GoogleAPI
 
 
 class Weight(ABC):
