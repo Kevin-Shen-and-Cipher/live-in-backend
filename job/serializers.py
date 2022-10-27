@@ -35,13 +35,52 @@ class BenefitSerializer(serializers.ModelSerializer):
         fields = ['name']
 
 
-class JobSerializer(serializers.ModelSerializer):
-    district = DistrictSerializer()
-    job_position = JobPositionSerializer()
-    working_hour = WorkingHourSerializer()
-    benefit_set = BenefitSerializer(many=True, read_only=True)
+class ListJobSerializer(serializers.ModelSerializer):
+    district = DistrictSerializer(read_only=True)
+
+    job_position = JobPositionSerializer(read_only=True)
+
+    working_hour = WorkingHourSerializer(read_only=True)
+
+    benefit = BenefitSerializer(
+        source='benefit_set',
+        many=True,
+        read_only=True)
 
     class Meta:
         model = Job
         exclude = ['id', 'created_at', 'updated_at']
-        depth = 1
+
+
+class CreateJobSerializer(serializers.ModelSerializer):
+    district = serializers.PrimaryKeyRelatedField(
+        queryset=District.objects.all(),
+        write_only=True)
+
+    job_position = serializers.PrimaryKeyRelatedField(
+        queryset=JobPosition.objects.all(),
+        write_only=True)
+
+    working_hour = serializers.PrimaryKeyRelatedField(
+        queryset=WorkingHour.objects.all(),
+        write_only=True)
+
+    benefit = BenefitSerializer(
+        many=True,
+        write_only=True,
+        allow_null=True,
+        required=False)
+
+    class Meta:
+        model = Job
+        exclude = ['id', 'created_at', 'updated_at']
+
+    def create(self, validated_data):
+        benefit_data = validated_data.pop('benefit')
+
+        job = super().create(validated_data)
+
+        for benefit in benefit_data:
+            Benefit.objects.create(job=job, **benefit)
+
+        return job

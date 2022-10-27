@@ -65,8 +65,8 @@ class Apartment(models.Model):
     rent_type = models.ForeignKey(RentType, on_delete=models.CASCADE)
     apartment_type = models.ForeignKey(ApartmentType, on_delete=models.CASCADE)
     room_type = models.ForeignKey(RoomType, on_delete=models.CASCADE)
-    restrict = models.ManyToManyField(Restrict)
-    device = models.ManyToManyField(Device)
+    restrict = models.ManyToManyField(Restrict, blank=True)
+    device = models.ManyToManyField(Device, blank=True)
 
     class Meta:
         db_table = 'apartment_apartments'

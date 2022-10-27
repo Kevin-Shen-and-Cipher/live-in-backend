@@ -15,7 +15,10 @@ class JobWeight(Weight):
 
     def __get_benefit_weigth(self, item):
         benefits = item.get('benefit_set')
-        weight = len(benefits) * self.BENEFIT_WEIGTH
+        weight = 0
+
+        if (benefits):
+            weight = len(benefits) * self.BENEFIT_WEIGTH
 
         if (weight > 100):
             weight = 100

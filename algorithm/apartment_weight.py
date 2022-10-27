@@ -14,11 +14,12 @@ class ApartmentWeight(Weight):
         return result
 
     def __get_facility_weigth(self, item):
-        facilities = item.get('surroundingfacility_set')
+        facilities = item.get('surroundingfacility')
         weight = 0
 
-        for facility in facilities:
-            weight += self.FACILITY_WEIGTH[facility['name']]
+        if (facilities):
+            for facility in facilities:
+                weight += self.FACILITY_WEIGTH[facility['name']]
 
         if (weight > 100):
             weight = 100
