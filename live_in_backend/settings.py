@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    "corsheaders",
     'job',
     'apartment',
 ]
@@ -51,6 +52,7 @@ if ADMIN_ENABLED is True:
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -147,3 +149,14 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
 }
+
+CORS_ALLOWED_ORIGINS = env('CORS_ALLOWED_ORIGINS', default=[])
+if CORS_ALLOWED_ORIGINS is str:
+    CORS_ALLOWED_ORIGINS = CORS_ALLOWED_ORIGINS.split(',')
+
+CORS_ALLOWED_ORIGIN_REGEXES = env('CORS_ALLOWED_ORIGIN_REGEXES', default=[])
+if CORS_ALLOWED_ORIGIN_REGEXES is str:
+    CORS_ALLOWED_ORIGIN_REGEXES = CORS_ALLOWED_ORIGIN_REGEXES.split(',')
+
+CORS_ALLOW_ALL_ORIGINS = str(
+    env('CORS_ALLOW_ALL_ORIGINS')).lower() in ('true', '1')
