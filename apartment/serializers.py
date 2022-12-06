@@ -36,11 +36,17 @@ class DeviceSerializer(serializers.ModelSerializer):
         model = Device
         fields = ['name']
 
+class FacilityTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FacilityType
+        fields = ['name']
 
 class SurroundingFacilitySerializer(serializers.ModelSerializer):
+    facility_type = FacilityTypeSerializer(read_only=True)
+    
     class Meta:
         model = SurroundingFacility
-        fields = ['name']
+        fields = ['name','facility_type']
 
 
 class ListApartmentSerializer(serializers.ModelSerializer):

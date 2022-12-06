@@ -19,7 +19,7 @@ class ApartmentWeight(Weight):
 
         if (facilities):
             for facility in facilities:
-                weight += self.FACILITY_WEIGTH[facility['name']]
+                weight += self.FACILITY_WEIGTH[facility['facility_type']['name']]
 
         if (weight > 100):
             weight = 100
