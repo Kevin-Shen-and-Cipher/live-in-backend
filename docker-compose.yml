@@ -26,15 +26,8 @@ services:
       context: .
       dockerfile: ./dockerfile
     command: python manage.py runserver 0.0.0.0:8000
-    # command: python -c "import time; time.sleep(100)"
-    # command: bash -c "sleep 10 && python manage.py runserver 0.0.0.0:8000"
-    # volumes:
-    #   # ./ 這個資料夾掛在 docker image 的 backend 底下
-    #   - ./:/backend
     ports:
       - "8000:8000"
-    environment:
-      DATABASE_URL: postgres://pdclab:123456@database:5432/live_in_backend
     depends_on:
       - database
     networks:
