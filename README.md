@@ -10,7 +10,7 @@ apache 2.4.29
 * docker 
 * docker-compose 
 * `docker-compose 
-* 填入重要資訊給 env
+* 填入重要資訊給 `./live_in_backend/env`
 ```env
 # PostgreSQL
 POSTGRES_HOST= #填入 database 的 container name 
