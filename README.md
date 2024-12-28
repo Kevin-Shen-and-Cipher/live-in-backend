@@ -26,3 +26,10 @@ SECRET_KEY=  # 任意填入， django 用於加密用
 ```
 * 使用 `docker-compose --env-file ./live_in_backend/.env up -d ` 開啟
     * 如果兩個服務中有東西建立失敗，可用 `docker exec -it <container name> bash` 來見查
+* **First start 則需要在加入兩個指令**
+```
+docker exec -it live_in_backend bash
+# 進入 live_in_backend container 
+live_in_backend# python manage.py migrate
+live_in_backend# python manage.py loaddata
+```
