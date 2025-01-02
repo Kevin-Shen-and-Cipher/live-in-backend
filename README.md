@@ -164,6 +164,8 @@ live_in_backend# python manage.py loaddata
        "name":"test apartment",
        // number
        "price": 30000,
+       // string, max length:100
+       "address": "apartment-address",
        // apartment coordinate
        // string, max length:50
        "coordinate":"25.02454,121.30551",
@@ -179,9 +181,9 @@ live_in_backend# python manage.py loaddata
        // number, refer by pk field in room_type.json
        "room_type": 1,
        // number, refer by pk field in restrict.json
-       "restrict": 1,
+       "restrict": [1],
        // number, refer by pk field in device.json
-       "device": 1,
+       "device": [1],
        "surrounding_facility":[
          {
              "name":"MRT",
