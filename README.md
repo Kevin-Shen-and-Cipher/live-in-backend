@@ -31,8 +31,8 @@ SECRET_KEY=  # 任意填入， django 用於加密用
 docker exec -it live_in_backend bash
 # 進入 live_in_backend container 
 live_in_backend# python manage.py migrate
-live_in_backend# python manage.py loaddata /app/job/default_data
-live_in_backend# python manage.py loaddata /app/apartment/default_data
+live_in_backend# python manage.py loaddata /app/job/default_data/*
+live_in_backend# python manage.py loaddata /app/apartment/default_data/*
 ```
 
 ## API
