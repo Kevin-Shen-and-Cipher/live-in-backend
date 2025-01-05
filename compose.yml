@@ -1,7 +1,7 @@
-version: "3.8"
 networks:
   live_in_network:
     driver: bridge
+    name: live_in_network
 
 services:
   database:
@@ -11,7 +11,7 @@ services:
     tty: true
     working_dir: /source
     ports:
-      - "0.0.0.0:5432:5432"
+      - "5432:5432"
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -23,13 +23,17 @@ services:
 
   backend:
     container_name: live_in_backend
+    working_dir: /app
     build:
       context: .
       dockerfile: ./dockerfile
     command: python manage.py runserver 0.0.0.0:8000
     ports:
-      - "0.0.0.0:8000:8000"
+      - "8000:8000"
     depends_on:
       - database
+    tty: true
+    volumes:
+      - .:/app
     networks:
       - live_in_network
