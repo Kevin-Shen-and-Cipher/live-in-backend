@@ -4,23 +4,6 @@ networks:
     name: live_in_network
 
 services:
-  database:
-    container_name: live_in_database
-    image: postgres:17
-    stdin_open: true
-    tty: true
-    working_dir: /source
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-    volumes:
-      - ./database:/var/lib/postgresql/data
-    networks:
-      - live_in_network
-
   backend:
     container_name: live_in_backend
     working_dir: /app
@@ -30,8 +13,6 @@ services:
     command: python manage.py runserver 0.0.0.0:8000
     ports:
       - "8000:8000"
-    depends_on:
-      - database
     tty: true
     volumes:
       - .:/app
